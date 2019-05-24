@@ -1,0 +1,52 @@
+.component-page-header {
+  display: flex;
+  align-items: center;
+}
+
+.docs-primary-header {
+  background: #3f51b5;
+}
+
+.docs-primary-header h1 {
+  font-weight: 300;
+  margin: 0;
+  padding: 28px 8px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.docs-primary-header {
+  padding-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover, a:active{
+  color: lightgray;
+}
+
+.navigation-items{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+mat-toolbar{
+  border-radius: 3px;
+}
+
+@media(max-width: 959px){
+  mat-toolbar{
+      border-radius: 0px;
+  }
+}
+
+.app-navbar .mat-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 8px 16px;
+}

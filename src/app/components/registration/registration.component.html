@@ -1,0 +1,78 @@
+<div class="login-card">
+  <div class="login-card_body">
+    <div class="icon">
+        <mat-icon>account_circle</mat-icon>
+    </div>
+    <h1 class="login-card_title">Sign Up</h1>
+    <form #formRegistration="ngForm" (ngSubmit)="onSubmit()" class="login-card_form">
+      <!--GivenName-->
+      <mat-form-field>
+          <input matInput name="givenName" type="text" placeholder="Given Name" #givenName="ngModel" [(ngModel)]="person.givenName" required>
+          <mat-error *ngIf="givenName.errors?.required">
+            Given Name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <!--MiddleName-->
+        <mat-form-field>
+          <input matInput name="middleName" type="text" placeholder="Middle Name" #middleName="ngModel" [(ngModel)]="person.middleName">
+        </mat-form-field>
+        <!--FamilyName-->
+        <mat-form-field>
+          <input matInput name="familyName" type="text" placeholder="Family Name" #familyName="ngModel" [(ngModel)]="person.familyName" required>
+          <mat-error *ngIf="familyName.errors?.required">
+            Family Name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      <!--Gender-->
+      <div id="gender-options-group">
+        <label id="gender-radio-group-label"><strong>Gender</strong></label>
+        <mat-radio-group
+          aria-labelledby="gender-radio-group-label"
+          class="gender-radio-group"
+          name="gender-radio-group"
+          #name="ngModel"
+          [(ngModel)]="person.gender">
+          <mat-radio-button class="gender-radio-button" *ngFor="let gender of genders" [value]="gender">
+            {{gender}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <!--Email-->
+      <mat-form-field>
+        <input matInput name="email" type="email" placeholder="Email" [formControl]="emailFormControl">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <div [formGroup]="passwordFormGroup">
+        <!--Password-->
+        <mat-form-field>
+          <input matInput name="password" type="password" placeholder="Password" formControlName="password">
+          <mat-error *ngIf="passwordFormGroup.controls.password.errors?.required">
+            Password is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <!--RepeatPassword-->
+        <mat-form-field>
+          <input matInput name="passwordConfirmation" type="password" placeholder="Repeat Password" formControlName="passwordConfirmation" [errorStateMatcher]="matcher">
+          <mat-error *ngIf="passwordFormGroup.controls.passwordConfirmation.errors?.required">
+            Repeat password is <strong>required</strong>
+          </mat-error>
+          <mat-error *ngIf="passwordFormGroup.hasError('doesMatchPassword')">
+            Password does not match
+          </mat-error>
+        </mat-form-field>
+      </div>
+      
+      <div id="register">
+          <button mat-raised-button (click)="onSubmit()" color="warn">Create account</button>
+      </div>
+    </form>
+  </div>
+  <div class="login-card_footer">
+  </div>
+</div>

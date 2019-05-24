@@ -1,0 +1,36 @@
+<div class="login-card">
+  <div class="login-card_body">
+    <div class="icon">
+        <mat-icon>account_circle</mat-icon>
+    </div>
+    <h1 class="login-card_title">Welcome!</h1>
+    <label class="login-card_subtitle">Sign in to your account</label>
+    <form action="" class="login-card_form">
+      <mat-form-field>
+        <input matInput placeholder="Email" [formControl]="emailFormControl">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="password" matInput placeholder="Password" [formControl]="passwordFormControl">
+        <mat-error *ngIf="passwordFormControl.hasError('required')">
+          Password is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      
+      <div id="login">
+        <button mat-raised-button type="submit" color="primary">Sign in</button>
+      </div>
+    </form>
+  </div>
+  <div class="login-card_footer">
+    <div class="login-card_subtitle">
+      Create an account?
+      <button mat-flat-button (click)="openRegistrationDialog()" color="warn">Sign up</button>
+    </div>
+  </div>
+</div>
