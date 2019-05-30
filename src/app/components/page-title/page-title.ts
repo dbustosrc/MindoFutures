@@ -12,7 +12,7 @@ export class ComponentPageTitle {
     if (title !== '') {
       title = `${title} | `;
     }
-    this.bodyTitle.setTitle(`${title}Mindo Futures`);
+    this.bodyTitle.setTitle(`${title}MINDO FUTURES`);
   }
 
   constructor(private bodyTitle: Title) { }

@@ -4,8 +4,7 @@
               *ngIf="(isScreenSmall | async)"
               [opened]="!(isScreenSmall | async)"
               [mode]="(isScreenSmall | async) ? 'over' : 'side'"
-              [fixedInViewport]="(isScreenSmall | async)"
-              fixedTopGap="92">
+              [fixedInViewport]="(isScreenSmall | async)">
     <app-nav-component [params]="params"></app-nav-component>
   </mat-sidenav>
   <div class="docs-component-sidenav-content">
@@ -19,7 +18,7 @@
         </app-nav-component>
         <router-outlet></router-outlet>
       </div>
-      <!--<app-footer></app-footer>-->
+      <app-footer></app-footer>
     </div>
   </div>
 </mat-sidenav-container>

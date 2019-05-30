@@ -11,12 +11,13 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { MaterialModule } from './components/material/material.module';
 import { NavBarComponent } from './components/navigation/navbar/navbar.component';
-import { SidenavListComponent } from './components/navigation/sidenav-list/sidenav-list.component';
-import { LayoutComponent } from './components/layout/layout.component';
+//import { SidenavListComponent } from './components/navigation/sidenav-list_delete/sidenav-list.component';
+//import { LayoutComponent } from './components/layout/layout.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { HeaderModule } from './components/navigation/header/header.component';
 import { ComponentSidenavModule } from './components/navigation/sidenav/sidenav.component';
+import { FooterModule } from './components/navigation/footer/footer';
 
 @NgModule({
   declarations: [
@@ -24,8 +25,8 @@ import { ComponentSidenavModule } from './components/navigation/sidenav/sidenav.
     LoginComponent,
     HomeComponent,
     NavBarComponent,
-    SidenavListComponent,
-    LayoutComponent,
+    //SidenavListComponent,
+    //LayoutComponent,
     RegistrationComponent
   ],
   entryComponents: [
@@ -42,6 +43,7 @@ import { ComponentSidenavModule } from './components/navigation/sidenav/sidenav.
     ReactiveFormsModule,
     HeaderModule,
     ComponentSidenavModule,
+    FooterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

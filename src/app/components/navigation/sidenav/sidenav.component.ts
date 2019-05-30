@@ -8,7 +8,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ActivatedRoute, Params, Router, RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import { HeaderModule } from '../header/header.component';
-//import {FooterModule} from '../../shared/footer/footer';
+import {FooterModule} from '../footer/footer';
 import {Observable, Subject, combineLatest} from 'rxjs';
 import {switchMap, takeUntil, startWith, map} from 'rxjs/operators';
 import {trigger, animate, state, style, transition} from '@angular/animations';
@@ -127,6 +127,7 @@ export class NavComponent implements OnInit, OnDestroy {
     RouterModule,
     CommonModule,
     HeaderModule,
+    FooterModule,
     BrowserAnimationsModule,
     MatIconModule,
     CdkAccordionModule
