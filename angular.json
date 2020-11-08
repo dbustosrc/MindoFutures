@@ -63,9 +63,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "MindoFuturesClient:build",
-            "host": "192.168.100.13",
-            "disableHostCheck": true
+            "browserTarget": "MindoFuturesClient:build"
           },
           "configurations": {
             "production": {

@@ -1,59 +1,88 @@
-#footer .copyrights {
-  background-color: #3f51b5;
-  padding: 20px 0;
-  font-size: 15px;
-  float: right;
-  width: 100%;
+.docs-footer {
+  padding: 12px;
+  font-size: 12px;
+  margin-top: 40px;
+}
+
+.docs-footer-list {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 8px;
+}
+
+.docs-footer-logo {
+  flex: 1;
+  display: flex;
+  text-align: left;
+  justify-content: flex-start;
+  flex-direction: column;
+  max-width: 345px;
+  min-width: 345px;
+}
+
+.docs-footer-angular-logo {
+  height: 50px;
+}
+
+.docs-footer-copyright {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.docs-footer-social {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  flex-direction: column;
+  min-width: 225px;
   text-align: right;
 }
 
+.docs-footer-logo span {
+  display: inline-block;
+  line-height: 20px;
+  //margin: 0 40px;
+  //vertical-align: bottom;
+  font-size: 16px;
+  a {
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 884px){
+  .docs-footer-list {
+    flex-direction: column;
+  }
+}
+
 .docs-footer-mindofutures-logo{
-  height: 47px;
+  height: 50px;
   vertical-align: middle;
   float: left;
   margin-right: 10px;
+  margin-left: 40px;
 }
 
-.docs-footer-facebook-logo{
-  height: 26px;
-  margin-right: 9px;
-}
-
-.docs-footer-instagram-logo{
-  height: 26px;
-  margin-right: 9px;
-}
-
-.docs-footer-twitter-logo{
-  height: 26px;
-  margin-right: 9px;
-}
-
+.docs-footer-facebook-logo,
+.docs-footer-instagram-logo,
+.docs-footer-twitter-logo,
 .docs-footer-vimeo-logo{
   height: 26px;
-  margin-right: 9px;
-}
-
-.footer-logo{
-  margin-top: 12px;
-  margin-right: 9px;
-}
-
-.container{
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
+  margin-right: 7px;
+  margin-left: 7px;
 }
 
 .widget_content{
-  float: right;
-  bottom: 0px;
-  position: absolute;
-  right: 0;
-}
-a{
-  color: white !important; 
-  text-decoration: none;
+  margin-right: 40px;
 }
