@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng serve",
+    "build": "node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng build",
+    "test": "node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng test",
+    "lint": "node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng lint",
+    "e2e": "node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng e2e"
   },
   "private": true,
   "dependencies": {
