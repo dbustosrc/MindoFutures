@@ -26,7 +26,7 @@ import { FooterModule } from './components/navigation/footer/footer';
     HomeComponent,
     NavBarComponent,
     //SidenavListComponent,
-    //LayoutComponent,
+    //LayoutComponent.,
     RegistrationComponent
   ],
   entryComponents: [
