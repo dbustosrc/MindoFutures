@@ -1,6 +1,7 @@
 import { Component, EventEmitter, NgModule, Output } from '@angular/core';
 import { ComponentPageTitle } from '../../page-title/page-title';
-import { MatButtonModule, MatIconModule } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { NavigationFocusModule } from '../navigation-focus/navigation-focus';
 
 @Component({

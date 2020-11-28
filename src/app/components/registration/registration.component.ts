@@ -3,7 +3,7 @@ import { FormControl, Validators, FormGroup, FormBuilder, FormGroupDirective, Ng
 import { User, Status } from 'src/app/models/User';
 import { Person, Gender } from 'src/app/models/Person';
 import { $enum } from 'ts-enum-util';
-import { ErrorStateMatcher } from '@angular/material';
+import { ErrorStateMatcher } from '@angular/material/core';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
